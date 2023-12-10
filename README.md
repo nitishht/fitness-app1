@@ -42,6 +42,6 @@ Click the "Cancel" button to discard changes.
 Feel free to contribute to the project by opening issues or submitting pull requests.
 
 
-![Screenshot 1](screenshots/Screenshot%20(12).png)
+![Screenshot 1](Screenshots/Screenshot%20(12).png)
 
 
