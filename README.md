@@ -43,5 +43,13 @@ Feel free to contribute to the project by opening issues or submitting pull requ
 
 
 ![Screenshot 1](Screenshots/Screenshot%20(12).png)
+![Screenshot 2](Screenshots/Screenshot%20(13).png)
+![Screenshot 3](Screenshots/Screenshot%20(14).png)
+![Screenshot 4](Screenshots/Screenshot%20(15).png)
+![Screenshot 5](Screenshots/Screenshot%20(16).png)
+![Screenshot 6](Screenshots/Screenshot%20(17).png)
+![Screenshot 7](Screenshots/Screenshot%20(18).png)
+![Screenshot 8](Screenshots/Screenshot%20(19).png)
+
 
 
