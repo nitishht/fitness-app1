@@ -1,0 +1,424 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gradient_background {
+  background: linear-gradient(90deg, #0d1e48, #000000);
+  height: 100vh;
+  width: 100vw;
+  animation: gradient-anim 10s ease-in-out infinite;
+  background-size: 200% 100%;
+  overflow: auto;
+}
+
+@keyframes gradient-anim {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.client-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  border: 0px solid #355b8586;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.client-row:hover {
+  transform: scale(1.02);
+}
+
+.client-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #1d1d1e, #453a7661);
+  z-index: -1;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.client-row:hover::before {
+  opacity: 1;
+}
+
+.name-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.location-container {
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  background-color: rgba(46, 75, 101, 0.7);
+  border: 2px solid #2e4b65;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #1a2838;
+  box-shadow: 0 0 10px rgba(46, 75, 101, 0.8);
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #453a7661; /* Use the same color as the client row's after-hover color */
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.edit-save-btn,
+.add-appointment-btn,
+.add-client-btn {
+  background-color: #453a7661;
+  color: #7ca3aa;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.edit-save-btn:hover,
+.add-appointment-btn:hover,
+.add-client-btn:hover {
+  background-color: #453a7661; /* Use the same color as the client row's after-hover color */
+  color: #fff;
+  transform: scale(1.1);
+  margin-right: 10px;
+  
+}
+
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.t1 {
+  color: rgb(82, 122, 157);
+  padding-left: 5px;
+}
+
+
+/* .client-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; Adjust the height as needed
+} */
+
+
+
+
+
+
+/* Updated styles for a centered search bar */
+
+/* Updated modern and aesthetic styles for the navbar */
+
+/*.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically 
+  padding: 20px;
+  background-color: rgba(32, 58, 89, 0.7);
+  box-shadow: 0 4px 6px rgba(67, 47, 47, 0.1);
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s;
+  position: relative; /* Added position relative for absolute positioning of search bar 
+}*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically */
+  padding: 20px;
+  background-color: rgba(32, 58, 89, 0.7);
+  box-shadow: 0 4px 6px rgba(67, 47, 47, 0.1);
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s;
+  position: relative; /* Added position relative for absolute positioning of search bar */
+}
+.logo {
+  width: 310px;
+  height: 50px;
+  animation: logoAnimation 5s infinite linear;
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: scale(1);
+    filter: brightness(0) invert(1);
+  }
+  25% {
+    filter: brightness(1) invert(0); /* Change to the desired blue shade */
+  }
+  50% {
+    transform: scale(1.1);
+    filter: brightness(0.8) invert(1);
+  }
+  75% {
+    filter: brightness(1) invert(0); /* Change to the desired blue shade */
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(0) invert(1);
+  }
+}
+
+
+/*.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally 
+  background-color: rgba(46, 75, 101, 0.5);
+  border-radius: 25px; /* Rounded corners 
+  padding: 10px;
+  transition: background-color 0.3s, border-radius 0.3s; /* Added border-radius transition 
+  position: absolute;
+  left: 23%; /* Centering the search bar 
+  transform: translateX(-50%);
+  top: 50%; /* Centering the search bar vertically 
+  transform: translateY(-50%);
+}*/
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  background-color: rgba(46, 75, 101, 0.5);
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px;
+  transition: background-color 0.3s, border-radius 0.3s; /* Added border-radius transition */
+  position: absolute;
+  left: 23%; /* Centering the search bar */
+  transform: translateX(-50%);
+  top: 50%; /* Centering the search bar vertically */
+  transform: translateY(-50%);
+}
+.navbar:hover {
+  background-color: #453a7661; /* Use the same color as the client row's after-hover color */
+}
+
+.search-input {
+  background: none;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  outline: none;
+  width: 100;
+  transition: width 0.5s ease-in-out, padding 0.3s, opacity 0.3s; /* Adjusted transition timing */
+  opacity: 1; /* Hidden by default */
+}
+
+.navbar:hover .search-bar {
+  background-color: rgba(46, 75, 101, 0.8); /* Darker background on hover */
+  border-radius: 10px; /* Smoother transition back to rounded corners */
+}
+
+.navbar:hover .search-input {
+  width: 900px;
+  padding: 10px;
+  opacity: 1; /* Fade in on hover */
+}
+
+.search-input:focus {
+  width: 150px;
+  padding: 10px;
+  opacity: 1;
+}
+
+.profile-symbol {
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s;
+}
+
+.profile-symbol:hover {
+  filter: brightness(0.8) invert(1);
+}
+/* Add this style to your existing CSS */
+
+.show-calendar-btn {
+  background-color: #453a7661;
+  color: #7ca3aa;
+  padding: 10px 10px;
+  margin-left: 980px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  margin-top: 5px;
+  height: 55px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.show-calendar-btn:hover {
+  background-color: #2b234a61; /* Use the same color as the client row's after-hover color */
+  color: #978c8c;
+  transform: scale(1.1);
+}
+
+
+
+
+/* app.css */
+/* ... existing styles ... */
+
+/* Calendar.css */
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding: 0px;
+}
+
+.calendar-heading {
+  color: #5d527edd;
+  align-items: center;
+  margin-left: 1500px;
+}
+
+.custom-calendar {
+  /* Add your custom styles for the calendar component */
+  max-width: 400px;
+  margin: 5px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 750px;
+}
+
+
+.appointment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appointment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar-btn {
+  background-color: #453a7661;
+  color: #7ca3aa;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.calendar-btn:hover {
+  background-color: #453a7661;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* styles.css or your preferred stylesheet */
+
+.confirmation-dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(25, 20, 61, 0.64);
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.confirmation-dialog.open {
+  display:block;
+  width: 300px;
+  height: 150px;
+}
+
+.dialog-content {
+  text-align: center;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+
